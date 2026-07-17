@@ -4,3 +4,4 @@ __pycache__/
 .pytest_cache/
 .vscode/
 seosiri_api_guard_mcp_server.egg-info/
+src/compliance_audit.log
