@@ -33,3 +33,16 @@ def test_biorobotics_boundary_remediation():
     assert "DECK_LIMIT_X_EXCEEDED" in result["violations_found"]
     assert "EXCESSIVE_VELOCITY_CAVITATION_RISK" in result["violations_found"]
     assert result["payload"] == "G1 X200.0 Y10.0 F500.0"
+
+def test_combined_json_remediation():
+    payload = json.dumps({
+        "action": "G1 X240.0 Y10.0 F2000",
+        "billing_card": "4242 4242 4242 4242"
+    })
+    result = enforce_biorobotics_guard(payload)
+    assert result["status"] == "REMEDIATED"
+    assert "DECK_LIMIT_X_EXCEEDED" in result["violations_found"]
+    
+    # Verify that the value nested inside the JSON key 'action' was successfully updated
+    data = json.loads(result["payload"])
+    assert data["action"] == "G1 X200.0 Y10.0 F500.0"
