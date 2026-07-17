@@ -1,6 +1,7 @@
-# tests/test_guard.py
 import json
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.core_validator import scan_universal_security
 from src.profiles.pci_dss import enforce_pci_compliance
 from src.profiles.gdpr_seo import enforce_gdpr_seo_compliance

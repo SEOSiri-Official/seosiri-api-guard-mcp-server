@@ -29,3 +29,6 @@ Sponsorship = "https://github.com/sponsors/SEOSiri-Official"
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src", "src.profiles"]
