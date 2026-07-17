@@ -1,5 +1,7 @@
 # seosiri-api-guard-mcp-server
 
+[![seosiri-api-guard-mcp-server MCP server](https://glama.ai/mcp/servers/SEOSiri-Official/seosiri-api-guard-mcp-server/badges/card.svg)](https://glama.ai/mcp/servers/SEOSiri-Official/seosiri-api-guard-mcp-server)
+
 An open-source, stateless, and high-performance Model Context Protocol (MCP) framework designed to validate, sanitize, and authorize LLM-generated API payloads.
 
 ## 💖 Sponsorship & Attribution
