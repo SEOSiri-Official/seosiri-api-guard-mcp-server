@@ -1,9 +1,9 @@
 # tests/test_guard.py
+import json
 import os
 import sys
-import json
 
-# Force the project root directory into the Python path to resolve 'src' packages cleanly
+# Force the project root directory into the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.core_validator import scan_universal_security
